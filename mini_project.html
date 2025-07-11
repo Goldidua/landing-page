@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MySite Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px;
+      background-color: #f4f4f4;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      padding: 12px 30px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Features */
+    .features-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box i {
+  font-size: 40px;
+  color: #007BFF;
+  margin-bottom: 15px;
+}
+
+
+    /* Testimonials */
+    .testimonials {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #e6e6e6;
+    }
+
+    .testimonial-box {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-left: 5px solid #007bff;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px 20px;
+        margin: 0;
+      }
+
+      .hero-content h1 {
+        font-size: 32px;
+      }
+
+      .hero-content p {
+        font-size: 16px;
+      }
+
+      .cta-button {
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+      }
+
+      .feature-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Meenu's Stylista</div>
+    <div class="menu-toggle" onclick="toggleMenu()">?</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Style World</h1>
+      <p>Your fashion starts here.</p>
+      <button class="cta-button">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+  <h2>Our Features</h2>
+  <div class="features-container">
+    <div class="feature-box">
+      <i class="fas fa-bolt"></i>
+      <h3>Fast Performance</h3>
+      <p>Optimized code and blazing speed for seamless experience.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-lock"></i>
+      <h3>Secure</h3>
+      <p>Top-notch security practices to protect your data.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Responsive</h3>
+      <p>Perfectly adapts to all screen sizes and devices.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-box">
+      <p>"This site changed the way I work. Super fast!"</p>
+      <strong>– Alex</strong>
+    </div>
+    <div class="testimonial-box">
+      <p>"Amazing UI and responsiveness. Highly recommended!"</p>
+      <strong>– Priya</strong>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Meenu's Stylista. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+https://chatgpt.com/c/686f419c-7110-8002-b64f-39e71b970bc9
+</body>
+</html>
